@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Shows</h1>
     <div><h1 class="title">{{title}}</h1>
 
       <div class="field">
@@ -19,6 +18,7 @@
           :status="show.status"
           :is-cart="show.isCart"
           :image="show.images.poster"
+          :overimage="show.images.box"
           :creation-date="show.creation"
           :nb-seasons="show.seasons"
           :genres="show.genres"

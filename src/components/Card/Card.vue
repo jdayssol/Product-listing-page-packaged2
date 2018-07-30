@@ -17,14 +17,13 @@
         </div>
         <div class="media-content">
           <p class="">Created in {{creationDate}} - {{nbSeasons}} seasons</p>
-          <!--
-          <template v-for="genre in genres">
-            <p class="tags"><span :v-text="genre" class="tag"></span></p>
-          </template>
-          -->
+          <p class="tags"><span class="tag" v-for="genre in genres" :key="genre.id">{{genre}}</span></p>
           <p class="tags"><span class="tag is-primary">{{status}}</span></p>
           <div class="content" @click="toggleDescription()">
-            <span v-if="longDescription">{{description}}</span>
+            <span v-if="longDescription">{{description}}
+              <figure class="image">
+            <img :src="overimage" alt="Image">
+          </figure></span>
             <span v-else>{{description | truncate(35)}}</span>
           </div>
         </div>
