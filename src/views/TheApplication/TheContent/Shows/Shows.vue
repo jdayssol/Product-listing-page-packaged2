@@ -11,10 +11,19 @@
                  v-model="searchTerm" @keypress.enter="search()" v-focus>
         </div>
       </div>
-      <Card :title="show.title" :description="show.description"
-      :status="show.status" :is-cart="show.isCart" :image="show.images.poster"
-      :creation-date="show.creation" :nb-seasons="show.seasons" :genres="show.genres"
-      @toggle-cart="toggleCart(show)" v-for="show in shows" :key="show.id" :show-id="show.id"></Card>
+        <Card v-for="show in shows"
+          :key="show.id"
+          :show-id="show.id"
+          :title="show.title"
+          :description="show.description"
+          :status="show.status"
+          :is-cart="show.isCart"
+          :image="show.images.poster"
+          :creation-date="show.creation"
+          :nb-seasons="show.seasons"
+          :genres="show.genres"
+          @toggle-cart="toggleCart(show)"
+          ></Card>
     </div>
   </div>
 </template>
@@ -22,5 +31,4 @@
 <script src="./shows.js"></script>
 
 <style scoped>
-
 </style>

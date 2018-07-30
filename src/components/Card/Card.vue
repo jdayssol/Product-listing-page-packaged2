@@ -17,7 +17,11 @@
         </div>
         <div class="media-content">
           <p class="">Created in {{creationDate}} - {{nbSeasons}} seasons</p>
-          <p class="tags"><span class="tag" v-for="genre in genres">{{genre}}</span></p>
+          <!--
+          <template v-for="genre in genres">
+            <p class="tags"><span :v-text="genre" class="tag"></span></p>
+          </template>
+          -->
           <p class="tags"><span class="tag is-primary">{{status}}</span></p>
           <div class="content" @click="toggleDescription()">
             <span v-if="longDescription">{{description}}</span>
@@ -29,7 +33,6 @@
   </div>
 </template>
 
-<script src="./api.js"></script>
 <script src="./card.js"></script>
 
 <style scoped>

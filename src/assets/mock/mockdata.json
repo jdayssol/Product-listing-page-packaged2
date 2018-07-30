@@ -1,4 +1,4 @@
-const mockData = {
+{
   "shows": [
     {
       "id": 1161,
@@ -998,26 +998,6 @@ const mockData = {
         "tags": null
       },
       "resource_url": "https://www.betaseries.com/serie/orange-is-the-new-black"
-    },
+    }
   ]
 }
-
-const API = {
-  search(query) {
-    if (!query) {
-      return Promise.resolve(mockData.shows)
-    }
-    return Promise.resolve(mockData.shows.filter(it = > it.title.match(query))
-  )
-  },
-  searchCategory(query) {
-    if (!query) {
-      return Promise.resolve(mockData.shows)
-    }
-    return Promise.resolve(mockData.shows.filter(it = > it.genres.match(query))
-  )
-  }
-}
-
-window.API = API
-window.mockData = mockData

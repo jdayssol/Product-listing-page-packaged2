@@ -23,6 +23,7 @@
   </div>
 </template>
 
-<script src="./api.js"></script>
 <script src="./cart.service.js"></script>
-<style scoped src="@/css/app.css"></style>
+<style src="../node_modules/font-awesome/css/font-awesome.min.css"></style>
+<style src="@/css/bulma.min.css"></style>
+<style src="@/css/app.css"></style>
