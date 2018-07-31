@@ -14,12 +14,21 @@ export default {
             mockiterator: 4
         }
     },
+    mounted () {
+        this.scroll()
+    },
+    beforeMount () {
+        this.getInitialShows()
+    },
     methods: {
         toggleCart (show) {
             this.$set(show, 'isCart', !show.isCart)
         },
         search () {
-            this.shows = mockData.shows.filter(it => it.title.toUpperCase().indexOf(this.searchTerm.toUpperCase()) !== -1)
+            if (this.searchTerm.length > 0) {
+                this.shows = mockData.shows.filter(
+                    it => it.title.toUpperCase().includes(this.searchTerm.toUpperCase()))
+            }
         },
         getInitialShows () {
             for (var i = 0; i < 3; i++) {
@@ -35,11 +44,5 @@ export default {
                 }
             }
         }
-    },
-    mounted () {
-        this.scroll()
-    },
-    beforeMount () {
-        this.getInitialShows()
     }
 }

@@ -14,7 +14,7 @@
       </figure>
       <p>&nbsp;</p>
       <div class="media">
-        <div class="media-left" @mouseover="toggleDescription()" @mouseleave="toggleDescription()">
+        <div class="media-left" @mouseover="setShowDescription(true)" @mouseleave="setShowDescription(false)">
           <figure class="image is-poster">
             <img :src="imgposter" alt="Image">
           </figure>

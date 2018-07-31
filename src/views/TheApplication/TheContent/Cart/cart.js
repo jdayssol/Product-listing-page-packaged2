@@ -21,9 +21,9 @@ export default {
             if (cartSize === 0) {
                 customTitle = 'Your cart is empty:'
             } else if (cartSize === 1) {
-                customTitle = 'Your cart has ' + cartSize + ' item'
+                customTitle = 'Your cart have ' + cartSize + ' item'
             } else {
-                customTitle = 'Your cart has ' + cartSize + ' items'
+                customTitle = 'Your cart have ' + cartSize + ' items'
             }
             return `${customTitle}`
         }

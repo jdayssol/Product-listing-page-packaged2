@@ -22,6 +22,9 @@ export default {
         },
         toggleDescription () {
             this.longDescription = !this.longDescription
+        },
+        setShowDescription (isShow) {
+            this.longDescription = isShow
         }
     }
 }

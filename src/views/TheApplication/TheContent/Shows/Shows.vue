@@ -5,9 +5,13 @@
       <div class="field">
         <label class="label">Search</label>
         <div class="control">
-          <input class="input" type="text"
-                 placeholder="Dummy filter functionality by title. Ex : Game of thrones, Breaking bad, ..."
-                 v-model="searchTerm" @keypress.enter="search()" v-focus>
+          <input
+            class="input" type="text"
+            placeholder="Dummy filter functionality by title. Ex : Game of thrones, Breaking bad, ..."
+            v-model="searchTerm"
+            v-focus
+            @input="search()">
+
         </div>
       </div>
         <Card v-for="show in shows"
