@@ -9,22 +9,25 @@
       </a>
     </div>
     <div class="card-content">
+      <figure class="image is-show">
+        <img :src="imgbox" alt="Image">
+      </figure>
+      <p>&nbsp;</p>
       <div class="media">
         <div class="media-left" @mouseover="toggleDescription()" @mouseleave="toggleDescription()">
-          <figure class="image is-128x200">
-            <img :src="image" alt="Image">
+          <figure class="image is-poster">
+            <img :src="imgposter" alt="Image">
           </figure>
         </div>
         <div class="media-content">
+
           <p class="">Created in {{creationDate}} - {{nbSeasons}} seasons</p>
           <p class="tags"><span class="tag" v-for="genre in genres" :key="genre.id">{{genre}}</span></p>
           <p class="tags"><span class="tag is-primary">{{status}}</span></p>
           <div class="content" @click="toggleDescription()">
             <span v-if="longDescription">{{description}}
-              <figure class="image">
-            <img :src="overimage" alt="Image">
-          </figure></span>
-            <span v-else>{{description | truncate(35)}}</span>
+              </span>
+            <span v-else>{{description | truncate(56)}}</span>
           </div>
         </div>
       </div>

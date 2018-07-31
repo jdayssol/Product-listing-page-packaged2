@@ -7,22 +7,20 @@ import store from './store'
 Vue.config.productionTip = false
 
 Vue.directive('focus', {
-  inserted: function (el) {
-    el.focus()
-  }
+    inserted: function (el) {
+        el.focus()
+    }
 })
 
 Vue.filter('truncate', (value, truncate) => {
-  if (truncate > 0) {
-    return value.substr(0, truncate) + '...'
-  }
-  return value
+    if (truncate > 0) {
+        return value.substr(0, truncate) + '...'
+    }
+    return value
 })
 
-const vm = new Vue({
-  router,
-  store,
-  render: h => h(App)
+new Vue({
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
-
-window.vm = vm

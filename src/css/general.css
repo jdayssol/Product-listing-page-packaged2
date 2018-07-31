@@ -1,0 +1,36 @@
+.navbar-item.is-active {
+    color: #00D1B2 !important;
+}
+
+.card-result {
+    margin-bottom: 20px;
+}
+
+.is-poster {
+    height: 200px;
+    width: 128px;
+}
+
+.is-show {
+    height: 100px;
+    width: 400px;
+}
+
+.is-cart {
+    color: #FFDD57;
+}
+
+
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #a7cbeb;
+}

@@ -5,7 +5,7 @@ export default {
     components: {
         'showDetail': ShowDetail
     },
-    props: ['showId', 'title', 'description', 'status', 'image', 'overimage', 'creationDate', 'nbSeasons', 'genres', 'isCart'],
+    props: ['showId', 'title', 'description', 'status', 'imgposter', 'imgbox', 'creationDate', 'nbSeasons', 'genres', 'isCart'],
     data () {
         return {
             longDescription: false
