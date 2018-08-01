@@ -9,7 +9,3 @@
 
 <script src="./cart.service.js"></script>
 <script src="./cart.js"></script>
-
-<style scoped>
-
-</style>

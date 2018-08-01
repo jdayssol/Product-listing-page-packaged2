@@ -33,6 +33,3 @@
 </template>
 
 <script src="./shows.js"></script>
-
-<style scoped>
-</style>

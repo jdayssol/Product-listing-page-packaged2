@@ -19,7 +19,7 @@ export default {
             let cartSize = this.shows.filter(it => it.isCart).length
             let customTitle = ''
             if (cartSize === 0) {
-                customTitle = 'Your cart is empty:'
+                customTitle = 'Your cart is empty. Please go back to search for purchase.'
             } else if (cartSize === 1) {
                 customTitle = 'Your cart have ' + cartSize + ' item'
             } else {

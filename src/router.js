@@ -10,7 +10,7 @@ export default new Router({
     routes: [
         {name: 'shows', path: '/shows', component: Shows},
         {name: 'showDetail', path: '/shows/:showId', component: ShowDetail, props: true},
-        {name: 'cart', path: '/cart', component: Cart, alias: '/starred'},
+        {name: 'cart', path: '/cart', component: Cart, alias: '/cart'},
         {path: '', redirect: '/shows'}
     ]
 })

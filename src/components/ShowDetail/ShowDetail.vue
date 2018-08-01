@@ -10,7 +10,3 @@
 </template>
 
 <script src="./showdetail.js"></script>
-
-<style scoped>
-
-</style>
