@@ -1,19 +1,22 @@
 import ShowDetail from '@/components/ShowDetail/ShowDetail.vue'
+import Carousel from '@/components/Carousel/Carousel.vue'
 
 export default {
     name: 'Card',
     components: {
-        'showDetail': ShowDetail
+        'showDetail': ShowDetail,
+        'Carousel': Carousel
     },
-    props: ['showId', 'title', 'description', 'status', 'imgposter', 'imgbox', 'creationDate', 'nbSeasons', 'genres', 'isCart'],
+    props: ['showId', 'title', 'description', 'status', 'imgposter', 'imgbox', 'creationDate', 'nbSeasons', 'genres', 'isCart', 'network', 'showCarrousel', 'carrouselimg'],
     data () {
         return {
-            longDescription: false
+            longDescription: false,
+            activeNetwork: false
         }
     },
     computed: {
         titleCart () {
-            return `${this.title} is ${this.isCart ? '' : 'not'} in the cart.`
+            return `is ${this.isCart ? 'added' : 'not'} to the cart`
         }
     },
     methods: {
@@ -23,8 +26,8 @@ export default {
         toggleDescription () {
             this.longDescription = !this.longDescription
         },
-        setShowDescription (isShow) {
-            this.longDescription = isShow
+        setShowNetwork (isShow) {
+            this.activeNetwork = isShow
         }
     }
 }

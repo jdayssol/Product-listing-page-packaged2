@@ -1,10 +1,12 @@
 import Card from '@/components/Card/Card.vue'
+import Carousel from '@/components/Carousel/Carousel.vue'
 import mockData from '@/assets/mock/mockdata.json'
 
 export default {
     name: 'Shows',
     components: {
-        'Card': Card
+        'Card': Card,
+        'Carousel': Carousel
     },
     data () {
         return {

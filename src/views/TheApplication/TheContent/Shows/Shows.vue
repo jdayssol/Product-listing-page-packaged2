@@ -1,17 +1,16 @@
 <template>
   <div>
-    <div><h1 class="title">{{title}}</h1>
-
+    <div>
       <div class="field">
-        <label class="label">Search</label>
         <div class="control">
-          <input
-            class="input" type="text"
-            placeholder="Dummy filter functionality by title. Ex : Game of thrones, Breaking bad, ..."
-            v-model="searchTerm"
-            v-focus
-            @input="search()">
-
+          <div class="search-bar">
+            <i class="icon fa fa-search"/>
+            <input class="input" type="text"
+                   placeholder="Search (dummy filter functionality by title. Ex : Game of thrones, Breaking bad, ...)"
+                   v-model="searchTerm"
+                   v-focus
+                   @input="search()">
+          </div>
         </div>
       </div>
         <Card v-for="show in shows"
@@ -26,6 +25,7 @@
           :creation-date="show.creation"
           :nb-seasons="show.seasons"
           :genres="show.genres"
+          :network="show.network"
           @toggle-cart="toggleCart(show)"
           ></Card>
     </div>
