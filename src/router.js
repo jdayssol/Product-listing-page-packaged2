@@ -7,6 +7,7 @@ import Shows from './views/TheApplication/TheContent/Shows/Shows.vue'
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [
         {name: 'shows', path: '/shows', component: Shows},
         {name: 'showDetail', path: '/shows/:showId', component: ShowDetail, props: true},
